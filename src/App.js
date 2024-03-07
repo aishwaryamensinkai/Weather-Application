@@ -3,6 +3,7 @@ import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import "tailwindcss/tailwind.css";
 import TopButtons from "./Components/TopButtons";
 import Inputs from "./Components/Inputs";
+import TimeAndLocation from "./Components/TimeAndLocation";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
     >
       <TopButtons />
       <Inputs />
+
+      <TimeAndLocation />
     </div>
   );
 }
