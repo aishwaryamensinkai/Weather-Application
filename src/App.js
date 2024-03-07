@@ -1,9 +1,9 @@
 import "./App.css";
-import UilReact from "@iconscout/react-unicons/icons/uil-react";
 import "tailwindcss/tailwind.css";
 import TopButtons from "./Components/TopButtons";
 import Inputs from "./Components/Inputs";
 import TimeAndLocation from "./Components/TimeAndLocation";
+import TemperatureAndDetails from "./Components/TemperatureAndDetails";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <Inputs />
 
       <TimeAndLocation />
+      <TemperatureAndDetails />
     </div>
   );
 }
