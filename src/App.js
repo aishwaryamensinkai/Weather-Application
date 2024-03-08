@@ -42,20 +42,29 @@ function App() {
   };
 
   return (
-    <div
-      className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-400 ${formatBackground()}`}
-    >
-      <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
+    <div className="flex justify-center items-center h-screen">
+      <div
+        className={`mx-auto max-w-screen-md mt-4 py-5 px-6 sm:px-10 md:px-16 lg:px-24 bg-gradient-to-br rounded-3xl shadow-xl shadow-gray-400 ${formatBackground()}`}
+      >
+        <TopButtons setQuery={setQuery} />
+        <Inputs
+          setQuery={setQuery}
+          units={units}
+          setUnits={setUnits}
+          inputSize="sm"
+          fontSize="sm"
+          rounded="md"
+        />
 
-      {weather && (
-        <div>
-          <TimeAndLocation weather={weather} />
-          <TemperatureAndDetails weather={weather} />
-        </div>
-      )}
+        {weather && (
+          <div className="mt-8">
+            <TimeAndLocation weather={weather} />
+            <TemperatureAndDetails weather={weather} />
+          </div>
+        )}
 
-      <ToastContainer autoClose={2000} theme="colored" newestOnTop={false} />
+        <ToastContainer autoClose={2000} theme="colored" newestOnTop={false} />
+      </div>
     </div>
   );
 }
