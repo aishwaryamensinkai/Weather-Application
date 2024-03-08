@@ -1,3 +1,8 @@
-# Weather Forecast
+# How to use the project
 
-A simple weather forecast app built with React.js.
+- Clone
+- Install dependencies (npm i)
+- Get your API key and add to weatherService.js
+- Enjoy!!
+
+> Leave a star :)
