@@ -20,9 +20,11 @@ function App() {
       toast.info("Fetching weather for " + message);
 
       await getFormattedWeatherData({ ...query, units }).then((data) => {
-        toast.success(
-          `Successfully fetched weather for ${data.name}, ${data.country}.`
-        );
+        setTimeout(() => {
+          toast.success(
+            `Successfully fetched weather for ${data.name}, ${data.country}.`
+          );
+        }, 2000); // 2000 milliseconds delay
 
         setWeather(data);
       });
@@ -53,7 +55,7 @@ function App() {
         </div>
       )}
 
-      <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
+      <ToastContainer autoClose={2000} theme="colored" newestOnTop={false} />
     </div>
   );
 }
